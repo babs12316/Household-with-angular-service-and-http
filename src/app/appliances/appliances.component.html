@@ -1,0 +1,23 @@
+<h2>Household appliances</h2>
+<div *ngFor="let house of jsondata">
+    <div *ngFor="let appliance of house.appliances">
+        <table>
+            <thead>
+                <tr>
+                    <th>Type</th>
+                    <th>power Input On</th>
+                    <th>power Input Off</th>
+                    <th>Duration</th>
+                </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let operatiodata of appliance.operationalModes">
+                <td> {{appliance.type}}</td>
+                <td> {{operatiodata.powerInputOn}} </td>
+                <td> {{operatiodata.powerInputOff}}</td>
+                <td> {{operatiodata.duration}} </td>
+            </tr>
+        </tbody>
+    </table>
+  </div>
+</div>

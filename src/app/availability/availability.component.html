@@ -1,0 +1,22 @@
+
+<h2>Household availabilities</h2>
+<div *ngFor="let house of jsondata">
+    <div *ngFor="let availability of house.availabilities">
+        <table>
+            <thead>
+                <tr>
+                    <th>Activity</th>
+                    <th>Start</th>
+                    <th>End</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let activity of availability.activities">
+                    <td> {{activity.name}}</td>
+                    <td> {{activity.start.$date}}</td>
+                    <td> {{activity.end.$date}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
